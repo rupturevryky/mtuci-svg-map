@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    color: #EDEDED;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+}
+
+ul li {
+    display: inline;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
