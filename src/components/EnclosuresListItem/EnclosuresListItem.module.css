@@ -1,0 +1,13 @@
+.circle {
+    border-radius: 50%;
+    background-color: #878787;
+    height: 34px;
+    width: 34px;
+    margin-right: 20px;
+}
+
+.string {
+    display: flex;
+    padding-bottom: 27px;
+    align-items: center;
+}
