@@ -1,6 +1,6 @@
-const svgMtuci = () => {
+const SvgMtuci = () => {
     return (
-        <svg width="678" height="885" viewBox="0 0 678 885" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="565" height="743" viewBox="0 0 678 885" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_77_200)">
                 <path d="M652.971 661.513H588.044L595.259 675.613H663.464L652.971 661.513Z" fill="#86C66F" />
                 <path d="M663.464 675.613H595.258L596.57 874H665.104L663.464 675.613Z" fill="#A2E48A" />
@@ -38,8 +38,8 @@ const svgMtuci = () => {
                 <path d="M189.959 189.32L183.729 187.352L202.747 128L208.322 131.607L189.959 189.32Z" fill="#585858" />
             </g>
             <defs>
-                <filter id="filter0_d_77_200" x="0" y="0" width="677.104" height="885" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_77_200" x="0" y="0" width="677.104" height="885" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dx="3" dy="2" />
                     <feGaussianBlur stdDeviation="4.5" />
@@ -50,8 +50,7 @@ const svgMtuci = () => {
                 </filter>
             </defs>
         </svg>
-
     );
 };
 
-export default svgMtuci;
+export default SvgMtuci;

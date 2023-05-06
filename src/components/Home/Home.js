@@ -1,13 +1,13 @@
-// import svgMtuci from '../svg/FullMtuci.svg';
-import { svgMtuci } from "../SvgMtuci/svgMtuci"
+import React from "react"
+import SvgMtuci from "../SvgMtuci/SvgMtuci";
+import EnclosuresList from "../EnclosuresList/EnclosuresList";
+import s from "./home.module.css";
 
 export const Home = () => {
     return (
-        <>
-            {/* <img src={svgMtuci} alt="svgNtuci" /> */}
-            <svgMtuci />
-            <div>Home page</div>
-        </>
+        <div className={s.block}>
+            <SvgMtuci />
+            <EnclosuresList className={s.list} />
+        </div>
     );
 };
-

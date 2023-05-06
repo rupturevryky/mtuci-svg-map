@@ -1,0 +1,10 @@
+.block {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 112px;
+}
+
+.list {
+    text-decoration: none;
+    padding-top: 63px;
+}

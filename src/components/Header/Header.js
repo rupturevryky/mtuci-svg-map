@@ -16,7 +16,7 @@ const Header = (props) => {
                             <Link to="general-Map">Общая карта</Link>
                         </li>
                         <li>
-                            <a href="">Telegram-Бот</a>
+                            <a href="nan">Telegram-Бот</a>
                         </li>
                         <li>
                             {/* <Searcher></Searcher> */}
