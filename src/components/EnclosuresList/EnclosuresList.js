@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-// import { createSelector } from 'reselect';
-import { selectBilding } from "../../app/Slice/SelectBildingsSlice"
+import { selectBilding, overSelect } from "../../app/Slice/SelectBildingsSlice"
 import EnclosuresListItem from "../EnclosuresListItem/EnclosuresListItem";
 import s from "./EnclosureList.module.css"
 
@@ -20,19 +19,30 @@ export const EnclosuresList = () => {
             dispatch(selectBilding(id))
             console.log(`enclosures!!! id = ${id}`)
         }
+        const onMouseEnter = (id) => {
+            if (props.active === false) {
+                dispatch(overSelect(id))
+                console.log(`enclosures!!! id = ${id}`)
+            }
+        }
         return (
             <EnclosuresListItem
-                {...props} key={id}
+                {...props} key={id} id={id}
                 onClick={() => enclosures(id)}
+                onMouseEnter={() => onMouseEnter(id)}
+                onMouseLeave={() => onMouseEnter(id)}
             />
         )
 
     });
 
     return (
-        <ul className={s.listItems}>
-            {layle}
-        </ul>
+        <div className={s.listWrapper}>
+            <ul className={s.listInner}>
+                {layle}
+            </ul>
+        </div>
+
 
     )
 

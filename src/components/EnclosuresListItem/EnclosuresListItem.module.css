@@ -4,6 +4,7 @@
     height: 34px;
     width: 34px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 .string {
@@ -20,3 +21,11 @@
 /* .highlight :hover {
     background-color: #878787;
 } */
+
+.item {
+    transition: 0.5s all;
+}
+
+.padding {
+    padding-top: 13px;
+}
