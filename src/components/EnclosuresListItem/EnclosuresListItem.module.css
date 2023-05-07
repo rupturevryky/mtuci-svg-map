@@ -11,3 +11,12 @@
     padding-bottom: 27px;
     align-items: center;
 }
+
+.highlight {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* .highlight :hover {
+    background-color: #878787;
+} */

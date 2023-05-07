@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 // import { createSelector } from 'reselect';
 import { selectBilding } from "../../app/Slice/SelectBildingsSlice"
 import EnclosuresListItem from "../EnclosuresListItem/EnclosuresListItem";
-// import s from "./EnclosureList.module.css"
+import s from "./EnclosureList.module.css"
 
 
 export const EnclosuresList = () => {
@@ -30,7 +30,7 @@ export const EnclosuresList = () => {
     });
 
     return (
-        <ul style={{ marginTop: 67 }}>
+        <ul className={s.listItems}>
             {layle}
         </ul>
 

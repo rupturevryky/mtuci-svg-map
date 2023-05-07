@@ -19,7 +19,7 @@ const EnclosuresListItem = ({ title, active, color, onClick }) => {
     }
 
     return (
-        <li onClick={onClick}>
+        <li onClick={onClick} className={s.highlight} >
             {item()}
         </li>
     );
