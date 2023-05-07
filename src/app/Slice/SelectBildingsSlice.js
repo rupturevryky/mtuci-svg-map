@@ -52,10 +52,11 @@ const enclouresSlice = createSlice({
     initialState,
     reducers: {
         selectBilding: (state, action) => {
-            state.enclouresCase.forEach(Case => {
-                if (Case.id === action.id) {
-                    Case.active = !Case.active
+            state.enclouresCase.forEach(item => {
+                if (item.id === action.payload) {
+                    item.active = !item.active
                 }
+                return item
             })
         }
     }
