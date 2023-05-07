@@ -5,13 +5,13 @@ const EnclosuresListItem = ({ title, active, blure, color, id, onClick, onMouseE
     const item = () => {
 
         const padding = (id) => id === 1 ? `${s.string} ${s.padding}` : `${s.string}`
-        const light = () => `${s.string} ${s.padding}`
+        // const light = () => `${s.string} ${s.padding}`
 
         if (active === false) {
             if (blure === true) {
                 return (
                     <div className={padding(id)}>
-                        <div className={s.circle}></div><p>{title}</p>
+                        <div className={s.circle} style={{ backgroundColor: color }}></div><p>{title}</p>
                     </div>
                 )
             } else {

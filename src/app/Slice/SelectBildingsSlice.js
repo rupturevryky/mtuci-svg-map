@@ -67,10 +67,18 @@ const enclouresSlice = createSlice({
                 return item
             })
         },
-        overSelect: (state, action) => {
+        blureTrue: (state, action) => {
             state.enclouresCase.forEach(item => {
                 if (item.id === action.payload) {
-                    item.blure = !item.blure
+                    item.blure = true
+                }
+                return item
+            })
+        },
+        blureFalse: (state, action) => {
+            state.enclouresCase.forEach(item => {
+                if (item.id === action.payload) {
+                    item.blure = false
                 }
                 return item
             })
@@ -81,4 +89,4 @@ const enclouresSlice = createSlice({
 const { actions, reducer } = enclouresSlice;
 
 export default reducer;
-export const { selectBilding, overSelect } = actions;
+export const { selectBilding, blureTrue, blureFalse } = actions;

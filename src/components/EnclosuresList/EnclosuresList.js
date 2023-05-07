@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectBilding, overSelect } from "../../app/Slice/SelectBildingsSlice"
+import { selectBilding, blureTrue, blureFalse } from "../../app/Slice/SelectBildingsSlice"
 import EnclosuresListItem from "../EnclosuresListItem/EnclosuresListItem";
 import s from "./EnclosureList.module.css"
 
@@ -21,7 +21,13 @@ export const EnclosuresList = () => {
         }
         const onMouseEnter = (id) => {
             if (props.active === false) {
-                dispatch(overSelect(id))
+                dispatch(blureTrue(id))
+                console.log(`enclosures!!! id = ${id}`)
+            }
+        }
+        const onMouseLeave = (id) => {
+            if (props.active === false) {
+                dispatch(blureFalse(id))
                 console.log(`enclosures!!! id = ${id}`)
             }
         }
@@ -30,7 +36,7 @@ export const EnclosuresList = () => {
                 {...props} key={id} id={id}
                 onClick={() => enclosures(id)}
                 onMouseEnter={() => onMouseEnter(id)}
-                onMouseLeave={() => onMouseEnter(id)}
+                onMouseLeave={() => onMouseLeave(id)}
             />
         )
 
