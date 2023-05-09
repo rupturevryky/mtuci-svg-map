@@ -1,5 +1,7 @@
+import { Searcher } from "../Searcher/Searcher";
 import icon from "../img/mtuciLogo.png"
 import s from "./Header.module.css"
+
 
 import { Outlet, Link } from "react-router-dom";
 
@@ -19,7 +21,7 @@ const Header = (props) => {
                             <a href="nan">Telegram-Бот</a>
                         </li>
                         <li>
-                            {/* <Searcher></Searcher> */}
+                            <Searcher />
                         </li>
                         <li>
                             <Link to="schedule">Расписание</Link>

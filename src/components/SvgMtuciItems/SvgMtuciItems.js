@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectBilding, blureTrue, blureFalse, blureAll } from "../../app/Slice/SelectBildingsSlice"
+import { selectBilding, blureTrue, blureFalse, blureAll } from "../../app/Slices/SelectBildingsSlice"
 import s from "./SvgMtuciItems.module.css"
 
 export const SvgMtuciItems = () => {
 
-    const bildings = useSelector(state => state.enclouresCase);
+    const bildings = useSelector(state => state.enclouresCase.enclouresCase);
     const dispatch = useDispatch();
 
     const onMouseEnter = (id) => {

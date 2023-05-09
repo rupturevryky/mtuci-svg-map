@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectBilding, blureTrue, blureFalse, blureAll } from "../../app/Slice/SelectBildingsSlice"
+import { selectBilding, blureTrue, blureFalse, blureAll } from "../../app/Slices/SelectBildingsSlice"
 import EnclosuresListItem from "../EnclosuresListItem/EnclosuresListItem";
 import s from "./EnclosureList.module.css"
 
@@ -8,8 +8,7 @@ import s from "./EnclosureList.module.css"
 const EnclosuresList = () => {
 
     const dispatch = useDispatch();
-
-    const bildings = useSelector(state => state.enclouresCase);
+    const bildings = useSelector(state => state.enclouresCase.enclouresCase);
 
     const layle = bildings.map(({ id, ...props }) => {
 

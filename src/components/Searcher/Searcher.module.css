@@ -1,0 +1,21 @@
+.search {
+    display: flex;
+    width: 477px;
+    height: 44px;
+    background-color: #EDEDED;
+    border-radius: 25px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search img {
+    width: 24px;
+    height: 24px;
+    padding-left: 17px;
+    padding-right: 10px;
+}
+
+.search p {
+    color: #A4A4A4;
+}

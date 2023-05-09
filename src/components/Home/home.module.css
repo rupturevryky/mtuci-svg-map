@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-around;
     padding-top: 112px;
+    background-color: #000;
+
 }
 
 .list {

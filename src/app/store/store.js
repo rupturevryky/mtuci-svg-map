@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import enclouresCase from "../Slice/SelectBildingsSlice"
+import enclouresCase from "../Slices/SelectBildingsSlice"
+import filter from "../Slices/FilterSlice";
 
 const store = configureStore({
-  reducer: enclouresCase,
+  reducer: { enclouresCase, filter },
   middleware: getDefaultMiddleware => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== 'production',
 });

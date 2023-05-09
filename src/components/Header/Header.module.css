@@ -1,28 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    list-style-type: none;
-    text-decoration: none;
-    text-align: center;
-    color: #EDEDED;
-}
-
 header {
     display: flex;
     justify-content: center;
-}
-
-nav {
-    width: 100%;
-}
-
-ul li {
-    display: inline;
+    background-color: #000;
+    padding: 45px 100px 0px 100px;
 }
 
 .wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
+}
+
+.wrapper li button {
+    width: 148px;
+    height: 44px;
+    border-radius: 25px;
+    color: #121212;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
