@@ -13,7 +13,7 @@ const EnclosuresList = () => {
 
     const layle = bildings.map(({ id, ...props }) => {
 
-        const enclosures = (id) => {
+        const onClick = (id) => {
             dispatch(selectBilding(id))
             console.log(`enclosures!!! id = ${id}`)
         }
@@ -33,7 +33,7 @@ const EnclosuresList = () => {
         return (
             <EnclosuresListItem
                 {...props} key={id} id={id}
-                onClick={() => enclosures(id)}
+                onClick={() => onClick(id)}
                 onMouseEnter={() => onMouseEnter(id)}
                 onMouseLeave={() => onMouseLeave(id)}
             />
@@ -63,7 +63,5 @@ const EnclosuresList = () => {
 
 
     )
-
-
 }
 export default EnclosuresList;

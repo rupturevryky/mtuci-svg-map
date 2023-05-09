@@ -68,9 +68,13 @@ const enclouresSlice = createSlice({
             })
         },
         blureTrue: (state, action) => {
+            console.log(action.payload);
+            debugger
             state.enclouresCase.forEach(item => {
                 item.blure = false;
                 if (item.id === action.payload) {
+                    console.log(action.payload);
+                    debugger
                     item.blure = true
                 }
                 return item

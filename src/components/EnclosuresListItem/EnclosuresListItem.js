@@ -29,7 +29,6 @@ const EnclosuresListItem = ({ title, active, blure, color, id, onClick, onMouseE
             )
         }
     }
-
     return (
         <li className={`${s.highlight} ${s.item}`}
             onClick={onClick}
