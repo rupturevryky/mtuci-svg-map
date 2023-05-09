@@ -68,11 +68,10 @@ export const SvgMtuciItems = () => {
                     <path d="M219.799 7L183.401 117.506L288.988 152.593L326.042 40.775L219.799 7Z" fill={colorTumbler(4, "#FFB4E1", "#C0C0C0")} />
                     <path d="M327.682 45.0382L326.042 40.7754L324.731 44.0545L327.682 45.0382Z" fill={colorTumbler(4, "#C582AA", "#666666")} />
                 </g>
-                {/* {colorTumbler(1, "#FFD4A1", "#C0C0C0")} */}
                 <g id="1" onMouseEnter={(e) => onMouseEnter(+e.currentTarget.id)}
                     onMouseLeave={(e) => onMouseLeave(+e.currentTarget.id)}
                     onClick={(e) => onClick(+e.currentTarget.id)}>
-                    <path d="M208.978 743.491L218.815 736.604L243.081 799.236L536.89 797.268L537.218 810.713L235.211 811.696L208.978 743.491Z" ffill="#9C9C9C" />
+                    <path d="M208.978 743.491L218.815 736.604L243.081 799.236L536.89 797.268L537.218 810.713L235.211 811.696L208.978 743.491Z" fill={colorTumbler(1, "#BFA27F", "#9C9C9C")} />
                     <path d="M161.758 296.219L172.579 300.81L84.0432 574.616L143.723 627.41L132.574 635.608L69.2871 577.895L161.758 296.219Z" fill={colorTumbler(1, "#BFA27F", "#9C9C9C")} />
                     <path d="M277.511 857.276L269.313 867.441V847.767H277.511V857.276Z" fill={colorTumbler(1, "#BFA27F", "#666666")} />
                     <path d="M35.84 529.692L21.7397 534.283L41.7424 540.513L44.6936 532.643L35.84 529.692Z" fill={colorTumbler(1, "#BFA27F", "#666666")} />
