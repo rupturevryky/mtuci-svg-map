@@ -15,7 +15,10 @@ const EnclosuresList = () => {
 
         const onClick = (id) => {
             dispatch(selectBilding(id))
-            console.log(`enclosures!!! id = ${id}`)
+            console.log(`onClick id = ${id}`)
+            if (bildings.filter(item => item.active === false).length === 6) {
+                dispatch(blureTrue(id))
+            }
         }
         const onMouseEnter = (id) => {
             if (props.active === false) {
