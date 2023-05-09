@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectBilding, blureTrue, blureFalse, blureAll } from "../../app/Slice/SelectBildingsSlice"
+import s from "./SvgMtuciItems.module.css"
 
 export const SvgMtuciItems = () => {
 
@@ -47,7 +48,7 @@ export const SvgMtuciItems = () => {
 
     return (
         <svg width="565" height="743" viewBox="0 0 678 885" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_77_200)" onMouseLeave={onMouseLeaveAll}>
+            <g filter="url(#filter0_d_77_200)" onMouseLeave={onMouseLeaveAll} className={s.pointer}>
                 <g id="2" onMouseEnter={(e) => onMouseEnter(+e.currentTarget.id)}
                     onMouseLeave={(e) => onMouseLeave(+e.currentTarget.id)}
                     onClick={(e) => onClick(+e.currentTarget.id)}
