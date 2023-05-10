@@ -1,0 +1,50 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000;
+    opacity: 0.8;
+}
+
+
+.dialog {
+    position: relative;
+
+    width: 477px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0 auto;
+
+    border: 2px solid #EDEDED;
+    border-radius: 25px;
+
+    transition: 1s;
+}
+
+.dialog input {
+    width: 457px;
+    height: 44px;
+
+    color: #000;
+    border-radius: 25px;
+
+    border: 0;
+
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    outline: none;
+}

@@ -19,3 +19,14 @@
 .search p {
     color: #A4A4A4;
 }
+
+.ofline {
+    width: 477px;
+}
+
+.dialog {
+    display: flex;
+    justify-content: center;
+    width: 477px;
+    flex-direction: column;
+}

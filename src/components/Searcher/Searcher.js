@@ -6,7 +6,6 @@ import search from "../svg/Search.svg";
 
 export const Searcher = () => {
 
-    const filter = useSelector(state => state.filter.filter)
     const isActive = useSelector(state => state.filter.isActive)
     const bildings = useSelector(state => state.enclouresCase.enclouresCase)
     const dispatch = useDispatch()
@@ -16,39 +15,22 @@ export const Searcher = () => {
         fullLayle.push(item.title)
     })
 
-    const layle = () => filter.map(item => <li key={item}>{item}</li>)
-
-    const mainBlock = () => {
-
-        const onclickIn = (block) => {
-            dispatch(fullList(fullLayle))
-            dispatch(changeActive())
-            console.log("click");
-        }
-        if (isActive === false) {
-            return (
-                <div className={s.search}
-                    onClick={(e) => onclickIn(e.currentTarget)}>
-                    <img src={search} alt="" /><p>Поиск кабинета</p>
-                </div>
-            )
-        } else {
-            return (
-                <dialog open>
-                    <ul>
-                        <input type="text" onClick={onclick}></input>
-                        {layle()}
-                    </ul>
-                </dialog>
-            )
-        }
+    const onclickIn = () => {
+        dispatch(fullList(fullLayle))
+        dispatch(changeActive())
+        console.log("click");
     }
 
-
-    return (
-        <>
-            {mainBlock()}
-        </>
-
-    )
+    if (isActive === false) {
+        return (
+            <div className={s.search}
+                onClick={onclickIn}>
+                <img src={search} alt="" /><p>Поиск кабинета</p>
+            </div>
+        )
+    } else {
+        return (
+            <div className={s.ofline}></div>
+        )
+    }
 }

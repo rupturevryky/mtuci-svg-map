@@ -9,7 +9,11 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.paddingTop {
+    padding-top: 13px;
 }
 
 .wrapper li button {
