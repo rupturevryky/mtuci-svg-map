@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { fullList, changeActive } from "../../app/Slices/FilterSlice"
+import { changeFilterList, changeActive } from "../../app/Slices/FilterSlice"
 
 import s from "./Searcher.module.css"
 import search from "../svg/Search.svg";
@@ -16,7 +16,7 @@ export const Searcher = () => {
     })
 
     const onclickIn = () => {
-        dispatch(fullList(fullLayle))
+        dispatch(changeFilterList(fullLayle))
         dispatch(changeActive())
         console.log("click");
     }

@@ -1,6 +1,3 @@
-import { useDispatch, useSelector } from "react-redux"
-import { changeActive } from "../../app/Slices/FilterSlice"
-
 import { Searcher } from "../Searcher/Searcher";
 import icon from "../img/mtuciLogo.png"
 import s from "./Header.module.css"
@@ -9,23 +6,9 @@ import s from "./Header.module.css"
 import { Outlet, Link } from "react-router-dom";
 
 const Header = (props) => {
-
-    const isActive = useSelector(state => state.filter.isActive)
-    const dispatch = useDispatch()
-
-    const onClickOut = () => {          // закрывает окно фильтра
-        dispatch(changeActive())
-        console.log("onClickOut");
-    }
-
     return (
         <>
-            <header className={props.s}
-                onClick={(e) => {       // Функция проверяет открыто ли окно фильтра, если да, то при вызове закрывает его
-                    if (isActive === true) {
-                        onClickOut()
-                    }
-                }}>
+            <header className={props.s}>
                 <nav>
                     <ul className={s.wrapper}>
                         <li>

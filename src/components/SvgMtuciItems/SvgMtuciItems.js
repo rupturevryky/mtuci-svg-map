@@ -9,7 +9,6 @@ export const SvgMtuciItems = () => {
 
     const onMouseEnter = (id) => {
         if (bildings[id - 1].active === false) {
-            console.log(id);
             dispatch(blureTrue(id))
             console.log(`MouseEnter id-${id}`);
         }
