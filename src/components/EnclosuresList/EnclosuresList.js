@@ -62,8 +62,6 @@ const EnclosuresList = () => {
                 {layle}
             </ul>
         </div>
-
-
     )
 }
 export default EnclosuresList;

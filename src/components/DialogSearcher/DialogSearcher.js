@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { changeActive, changeFilterList } from "../../app/Slices/FilterSlice"
 import { blureTrue, blureFalse, blureAll } from "../../app/Slices/SelectBildingsSlice"
 
+
+import DialogSearcherItem from "../DialogSearcherItem/DialogSearcherItem"
 import s from "./DialogSearcher.module.css"
 
 export const DialogSearcher = () => {
@@ -17,33 +19,11 @@ export const DialogSearcher = () => {
         fullLayle.push(item.title)
     })
 
-    let layle = () => {
-        if (filter.length !== 0) {
-            return filter.map(item => <Link
-                to={`/${item.replace(' ', '_')}`}
-                className={s.li}
-                key={item}
-                id={item}
-                onMouseEnter={(e) => (onMouse(e.currentTarget.id, blureTrue))}
-                onMouseLeave={e => onMouse(e.currentTarget.id, blureFalse)}
-                onClick={onClickOut}
-            >
-
-                <li>{item}</li><div className={s.color_line}></div>
-
-            </Link>)
-
-        } else {
-            return <li className={s.li}>Ничего не найдено</li>
-        }
-    }
-
     const onMouse = (id, action) => {
         let quest;
 
         for (let bilding of bildings) {
             if (bilding.title === id) {
-                debugger
                 quest = bilding.id
                 break
             }
@@ -51,6 +31,7 @@ export const DialogSearcher = () => {
         if (bildings[quest - 1].active === false) {
             console.log(quest);
             dispatch(action(quest))
+
             if (action === blureTrue) {
                 console.log(`MouseEnter id-${quest}`);
             } else {
@@ -73,7 +54,6 @@ export const DialogSearcher = () => {
 
     const onClickOut = () => {
         dispatch(changeActive())
-        onMouseLeaveAll()
         console.log("onClickOut");
     }
 
@@ -84,6 +64,26 @@ export const DialogSearcher = () => {
         let newList = fullLayle.filter(li => li.toLowerCase().indexOf(text.toLowerCase()) > -1)
         dispatch(changeFilterList(newList))
     }
+
+    const layle = filter.length !== 0 ?
+
+        bildings.map(({ id, ...props }) => {
+
+            if (filter.includes(props.title) === true) {
+
+                return (
+                    <DialogSearcherItem
+                        {...props} key={id} id={id}
+                        onMouseEnter={() => onMouse(props.title, blureTrue)}
+                        onMouseLeave={() => onMouse(props.title, blureFalse)}
+                        onClick={onClickOut}
+                    />)
+            }
+        }) : <li className={s.li}>Ничего не найдено</li>
+
+
+
+
 
     if (isActive === true) {
         return (
@@ -99,8 +99,9 @@ export const DialogSearcher = () => {
                         autoFocus
                         placeholder="Поиск кабинета"
                         type="text" onClick={onclick}
-                        onInput={(e) => filteredLayle(e.target.value)}></input>
-                    {layle()}
+                        onInput={(e) => filteredLayle(e.target.value)}>
+                    </input>
+                    {layle}
                 </ul>
             </div>
         )
