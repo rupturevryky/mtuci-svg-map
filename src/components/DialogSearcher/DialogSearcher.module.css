@@ -30,8 +30,6 @@
 
     border: 2px solid #EDEDED;
     border-radius: 25px;
-
-    transition: 1s;
 }
 
 .dialog input {
@@ -48,4 +46,15 @@
     font-size: 18px;
 
     outline: none;
+}
+
+.li {
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+    width: 457px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

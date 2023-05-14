@@ -6,6 +6,7 @@
     border-radius: 25px;
     align-items: center;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .search img {

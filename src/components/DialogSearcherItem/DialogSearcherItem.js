@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import s from "./DialogSearcherItem.module.css";
 
-const DialogSearcherItem = ({ title, color, id, onMouseEnter, onMouseLeave, onClick }) => {
+const DialogSearcherItem = ({ title, color, id, active, blure, onMouseEnter, onMouseLeave, onClick }) => {
 
     return (
         <Link
@@ -16,7 +16,7 @@ const DialogSearcherItem = ({ title, color, id, onMouseEnter, onMouseLeave, onCl
 
             <li>{title}</li>
             <div className={s.color_line}
-                style={{ backgroundColor: color }}>
+                style={{ backgroundColor: active === true || blure === true ? color : "#fff" }}>
             </div>
 
         </Link>
@@ -24,3 +24,4 @@ const DialogSearcherItem = ({ title, color, id, onMouseEnter, onMouseLeave, onCl
 }
 
 export default DialogSearcherItem;
+

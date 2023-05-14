@@ -14,21 +14,19 @@ const EnclosuresList = () => {
 
         const onClick = (id) => {
             dispatch(selectBilding(id))
-            console.log(`onClick id = ${id}`)
-            if (bildings.filter(item => item.active === false).length === 6) {
+            if (bildings.filter(item => item.active === false).length === bildings.length) {
                 dispatch(blureTrue(id))
             }
         }
-        const onMouseEnter = (id) => {
+
+        const onMouse = (id, action) => {
+
             if (props.active === false) {
-                dispatch(blureTrue(id))
-                console.log(`onMouseEnter!!! id = ${id}`)
-            }
-        }
-        const onMouseLeave = (id) => {
-            if (props.active === false) {
-                dispatch(blureFalse(id))
-                console.log(`onMouseLeave!!! id = ${id}`)
+                dispatch(action(id))
+
+                if (action === blureFalse && bildings.filter(item => item.active === false).length === bildings.length) {
+                    dispatch(blureAll())
+                }
             }
         }
 
@@ -36,23 +34,17 @@ const EnclosuresList = () => {
             <EnclosuresListItem
                 {...props} key={id} id={id}
                 onClick={() => onClick(id)}
-                onMouseEnter={() => onMouseEnter(id)}
-                onMouseLeave={() => onMouseLeave(id)}
+                onMouseEnter={() => onMouse(id, blureTrue)}
+                onMouseLeave={() => onMouse(id, blureFalse)}
             />
         )
 
     });
 
     const onMouseLeaveAll = () => {
-        let check = false;
         if (bildings.filter(item => item.active === false).length === bildings.length) {
-            check = true;
-        }
-        if (check === true) {
             dispatch(blureAll())
-            console.log(`onMouseLeaveAll`)
         }
-
     }
 
     return (
