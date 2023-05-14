@@ -12,10 +12,10 @@ const Header = (props) => {
                 <nav>
                     <ul className={s.wrapper}>
                         <li>
-                            <Link to="/"><img src={icon} alt="mtuci" /></Link>
+                            <Link to="mtuci-svg-map/"><img src={icon} alt="mtuci" /></Link>
                         </li>
                         <li>
-                            <Link to="general-Map"><p className={s.paddingTop}>Общая карта</p></Link>
+                            <Link to="mtuci-svg-map/general-Map"><p className={s.paddingTop}>Общая карта</p></Link>
                         </li>
                         <li>
                             <a href="nan"><p className={s.paddingTop}>Telegram-Бот</p></a>
@@ -24,10 +24,10 @@ const Header = (props) => {
                             <Searcher />
                         </li>
                         <li>
-                            <Link to="schedule"><p className={s.paddingTop}>Расписание</p></Link>
+                            <Link to="mtuci-svg-map/schedule"><p className={s.paddingTop}>Расписание</p></Link>
                         </li>
                         <li>
-                            <Link to="favorites-audiences"><p className={s.paddingTop}>Избранные аудитории</p></Link>
+                            <Link to="mtuci-svg-map/favorites-audiences"><p className={s.paddingTop}>Избранные аудитории</p></Link>
                         </li>
                         <li>
                             <button>Войти</button>

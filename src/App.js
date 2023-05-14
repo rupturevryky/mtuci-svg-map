@@ -12,7 +12,7 @@ const App = () => {
       <DialogSearcher />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}>
+        <Route path="mtuci-svg-map/" element={<Home />}>
           {/* <Route index element={}/> */}
         </Route>
       </Routes>
