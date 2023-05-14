@@ -18,7 +18,7 @@ const Header = (props) => {
                             <Link to="mtuci-svg-map/general-Map"><p className={s.paddingTop}>Общая карта</p></Link>
                         </li>
                         <li>
-                            <a href="nan"><p className={s.paddingTop}>Telegram-Бот</p></a>
+                            <a href="nan" target="_blank"><p className={s.paddingTop}>Telegram-Бот</p></a>
                         </li>
                         <li>
                             <Searcher />
