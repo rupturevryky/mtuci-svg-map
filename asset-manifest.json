@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mtuci-svg-map/static/css/main.b40d8f72.css",
-    "main.js": "/mtuci-svg-map/static/js/main.25104757.js",
+    "main.js": "/mtuci-svg-map/static/js/main.aa900714.js",
     "index.html": "/mtuci-svg-map/index.html",
     "static/media/Search.svg": "/mtuci-svg-map/static/media/Search.e005a94ed8889584656a3b946f8e6848.svg",
     "main.b40d8f72.css.map": "/mtuci-svg-map/static/css/main.b40d8f72.css.map",
-    "main.25104757.js.map": "/mtuci-svg-map/static/js/main.25104757.js.map"
+    "main.aa900714.js.map": "/mtuci-svg-map/static/js/main.aa900714.js.map"
   },
   "entrypoints": [
     "static/css/main.b40d8f72.css",
-    "static/js/main.25104757.js"
+    "static/js/main.aa900714.js"
   ]
 }
