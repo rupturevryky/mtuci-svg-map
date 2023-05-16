@@ -74,7 +74,7 @@ export const DialogSearcher = () => {
                 <ul className={s.dialog}>
                     <input
                         autoFocus
-                        placeholder="Поиск кабинета"
+                        placeholder="Поиск корпуса"
                         type="text" onClick={onclick}
                         onInput={(e) => filteredLayle(e.target.value)}>
                     </input>

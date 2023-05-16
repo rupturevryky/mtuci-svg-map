@@ -24,7 +24,7 @@ export const Searcher = () => {
         return (
             <div className={s.search}
                 onClick={onclickIn}>
-                <img src={search} alt="" /><p>Поиск кабинета</p>
+                <img src={search} alt="" /><p>Поиск корпуса</p>
             </div>
         )
     } else {
