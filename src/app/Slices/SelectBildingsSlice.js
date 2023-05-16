@@ -91,6 +91,13 @@ const enclouresSlice = createSlice({
                 item.blure = true
                 return item
             })
+        },
+        reboot: (state) => {
+            state.enclouresCase.forEach(item => {
+                item.active = false
+                item.blure = true
+                return item
+            })
         }
     }
 });
@@ -98,4 +105,4 @@ const enclouresSlice = createSlice({
 const { actions, reducer } = enclouresSlice;
 
 export default reducer;
-export const { selectBilding, blureTrue, blureFalse, blureAll } = actions;
+export const { selectBilding, blureTrue, blureFalse, blureAll, reboot } = actions;

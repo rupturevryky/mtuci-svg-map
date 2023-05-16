@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { changeActive, changeFilterList } from "../../app/Slices/FilterSlice"
-import { blureTrue, blureFalse, blureAll } from "../../app/Slices/SelectBildingsSlice"
+import { blureTrue, blureFalse, blureAll, reboot } from "../../app/Slices/SelectBildingsSlice"
 
 
 import DialogSearcherItem from "../DialogSearcherItem/DialogSearcherItem"
@@ -33,6 +33,11 @@ export const DialogSearcher = () => {
         dispatch(changeActive())
     }
 
+    const onClikLink = () => {
+        dispatch(changeActive())
+        dispatch(reboot())
+    }
+
     const filteredLayle = (text) => {
         if (filter.length === 0 || text.length === 0) {
             dispatch(changeFilterList(fullLayle))       // фильтр обновляется на полный
@@ -52,7 +57,7 @@ export const DialogSearcher = () => {
                         {...props} key={id} id={id}
                         onMouseEnter={() => onMouse(id, blureTrue)}
                         onMouseLeave={() => onMouse(id, blureFalse)}
-                        onClick={onClickOut}
+                        onClick={onClikLink}
                     />)
             }
         }) : <li className={s.li}>Ничего не найдено</li>

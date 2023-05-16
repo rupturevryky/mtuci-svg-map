@@ -18,7 +18,6 @@ export const Searcher = () => {
     const onclickIn = () => {
         dispatch(changeFilterList(fullLayle))
         dispatch(changeActive())
-        console.log("click");
     }
 
     if (isActive === false) {
