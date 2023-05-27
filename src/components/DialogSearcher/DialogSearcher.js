@@ -47,7 +47,7 @@ export const DialogSearcher = () => {
     }
 
     const layle = filter.length !== 0 ?
-
+        // eslint-disable-next-line
         bildings.map(({ id, ...props }) => {
 
             if (filter.includes(props.title) === true) {
