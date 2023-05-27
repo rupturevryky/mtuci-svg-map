@@ -70,7 +70,9 @@ export const DialogSearcher = () => {
                         onClickOut()
                     }
                 }}
-                className={s.background}>
+                className={s.background}
+                style={{ height: `${document.body.offsetHeight}px` }}
+            >
                 <ul className={s.dialog}>
                     <input
                         autoFocus
